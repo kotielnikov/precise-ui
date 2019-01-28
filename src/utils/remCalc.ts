@@ -1,5 +1,6 @@
 import { unit } from './unit';
 import { stripUnit } from './stripUnit';
+import memoize from 'memoize-one';
 
 function calcBasis(myBase: string) {
   const myUnit = unit(myBase);
@@ -34,7 +35,7 @@ function convertArray(input: Array<string>, baseNum: number) {
  * @param values One or more values to convert.
  * @param base The base value to use when calculating the `rem`.
  */
-export function remCalc(input: Array<string> | string, base?: string): string {
+export const remCalc = memoize((input: Array<string> | string, base?: string) => {
   // If no base is defined, defer to the global font size
   const myBase = base || '16px';
   const baseNum = calcBasis(myBase);
@@ -44,4 +45,7 @@ export function remCalc(input: Array<string> | string, base?: string): string {
   }
 
   return convertArray(input, baseNum);
-}
+});
+
+
+
