@@ -45,8 +45,7 @@ const AccordionItem = styled.li`
   overflow: visible;
   border-top: ${themed(({ theme }) => theme.accordionLine)};
   box-sizing: border-box;
-  font-size: ${remCalc('14px')};
-  line-height: 18px;
+  ${getFontStyle({ size: 'small' })}
   color: ${themed(({ theme }) => theme.text1)};
 
   &:last-child {

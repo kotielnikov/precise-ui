@@ -91,7 +91,7 @@ const StyledInteractiveList = styled(InteractiveList)`
 
 const DropdownButton = styled.div`
   color: ${(props: DropdownButtonProps) => (props.open ? colors.cyan : colors.grey2)};
-  font-size: ${({ menuSize }: DropdownButtonProps) => (menuSize === 'small' ? '14px' : '16px')};
+  ${({ menuSize }: DropdownButtonProps) => getFontStyle({ size: menuSize === 'small' ? 'small' : 'medium' })};
   cursor: pointer;
   display: flex;
   align-items: center;

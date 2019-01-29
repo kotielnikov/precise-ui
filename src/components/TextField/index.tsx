@@ -72,7 +72,7 @@ const TextFieldWrapper = styled(StackPanel)`
 const TextFieldArea = styled<TextFieldAreaProps, 'textarea'>('textarea')`
   color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
   border-radius: 0;
-  font-size: ${remCalc('16px')};
+  getfontstyle({size: 'medium'})
   font-family: inherit;
   padding: ${props => (props.labelShown ? `${distance.large} ${distance.medium} ${distance.small}` : distance.medium)};
   box-sizing: border-box;
@@ -104,7 +104,7 @@ const TextFieldArea = styled<TextFieldAreaProps, 'textarea'>('textarea')`
 const TextFieldElement = styled.div`
   display: flex;
   align-items: center;
-  font-size: ${remCalc('16px')};
+  getFontStyle({size: 'medium'})
   padding: ${distance.medium};
   color: ${themed(({ theme }) => theme.text2)};
   background: ${themed(({ theme }) => theme.ui3)};

@@ -35,7 +35,7 @@ const StyledTable = reStyled.table<StyledTableProps>(
     width: 100%;
     color: ${theme.text6};
     border: ${borderless ? 'none' : theme.tableBorder};
-    font-size: ${remCalc('14px')};
+     ${getFontStyle({ size: 'small' })}
 
     > thead > tr > th,
     > tbody > tr > td {

@@ -11,7 +11,7 @@ const StyledCloseButton = styled.a`
   background-color: ${colors.transparent};
   padding: 0;
   border: none;
-  font-size: 1rem;
+  ${getFontStyle({ size: 'medium' })}
   align-self: start;
   cursor: pointer;
   color: ${colors.black};

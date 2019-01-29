@@ -263,7 +263,7 @@ const StyledFlyoutWindow = reStyled<StyledFlyoutWindowProps, 'div'>('div')(
     color: ${theme.flyout.textColor};
     max-width: ${theme.flyout.maxWidth};
     max-height: ${theme.flyout.maxHeight};
-    font-size: ${theme.flyout.fontSize};
+    font-size: ${getFontStyle({ size: 'medium' })}
     ${!noGutter ? `padding: ${distance.small} ${distance.medium};` : ''} box-sizing: border-box;
 
     ${size && size.width !== undefined ? `width: ${size.width}px` : ''};

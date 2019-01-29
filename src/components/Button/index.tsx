@@ -73,25 +73,14 @@ function getThemeSettings(theme: PreciseFullTheme, buttonStyle?: ButtonStyle) {
   }
 }
 
-function getButtonLineHeight(themeSettings: ButtonThemeSettings, size?: ButtonSize) {
+function getButtonFontStyle(themeSettings: ButtonThemeSettings, size?: ButtonSize) {
   switch (size) {
     default:
     case 'medium':
-      return themeSettings.lineHeightMedium;
+      return getFontStyle({ size: 'medium', lineHeight: themeSettings.lineHeightMedium });
 
     case 'small':
-      return themeSettings.lineHeightSmall;
-  }
-}
-
-function getButtonFontSize(size?: ButtonSize) {
-  switch (size) {
-    default:
-    case 'medium':
-      return remCalc('16px');
-
-    case 'small':
-      return remCalc('14px');
+      return getFontStyle({ size: 'small', lineHeight: themeSettings.lineHeightSmall });
   }
 }
 
@@ -159,8 +148,7 @@ const StyledButton = styled<StyledButtonProps>(
       : getThemeSettings(props.theme, props.buttonStyle).text,
   )};
   font-family: ${themed(props => props.theme.fontFamily)};
-  font-size: ${props => getButtonFontSize(props.size)};
-  line-height: ${themed(props => getButtonLineHeight(getThemeSettings(props.theme, props.buttonStyle), props.size))};
+  ${props => getButtonFontStyle(getThemeSettings(props.theme, props.buttonStyle), props.size)}
   padding: ${props => getButtonPadding(props.size)};
   display: ${props => (props.block ? 'block' : 'inline-block')};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};

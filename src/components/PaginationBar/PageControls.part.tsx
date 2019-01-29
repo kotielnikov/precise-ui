@@ -36,7 +36,7 @@ const ChangePage = styled.button`
   padding: ${distance.small};
   margin: 0 ${distance.small};
   color: ${(props: ChangePageProps) => (!props.disabled ? cyan : grey1)};
-  font-size: 1.5rem;
+  ${getFontStyle({ size: 'xLarge' })}
   &:before,
   &:after {
     content: '';

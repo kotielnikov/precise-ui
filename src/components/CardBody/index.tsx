@@ -19,8 +19,7 @@ const StyledCardBody = styled.div`
 
   p {
     font-family: ${themed(props => props.theme.fontFamily || 'inherit')};
-    font-size: 14px;
-    line-height: 1.4;
+    ${getFontStyle({ size: 'small' })}
     margin: 0;
   }
 `;

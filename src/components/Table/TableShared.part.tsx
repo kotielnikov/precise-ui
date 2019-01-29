@@ -11,7 +11,7 @@ const HeaderLabel = styled.div`
   > span {
     display: inline-block;
     vertical-align: middle;
-    font-size: ${remCalc('14px')};
+    getFontStyle({size: 'small'})
   }
 `;
 
@@ -67,11 +67,11 @@ const SortIcon = styled<SortIconProps, 'span'>('span')`
 
 export const StyledTableHead = styled.thead`
   color: ${themed(({ theme }) => theme.text6 || theme.text1)};
-  font-weight: bold;
+  getFontStyle({weight: 'bold'})
 `;
 
 export const StyledTableFoot = styled.tfoot`
-  font-size: 0.8em;
+  ${getFontStyle({ size: 'xSmall' })}
 `;
 
 export const StyledTableHeaderRow = styled.tr``;

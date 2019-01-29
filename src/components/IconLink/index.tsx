@@ -58,8 +58,7 @@ const StyledIcon = styled<StyledIconProps & IconProps>(Icon)`
 const AnchorText = styled.span`
   display: inline-block;
   vertical-align: middle;
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
+  getFontStyle({size: 'medium'})
   margin-left: ${distance.xsmall};
 `;
 

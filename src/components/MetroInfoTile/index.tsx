@@ -26,8 +26,7 @@ const TileTitle = styled.span`
   bottom: 0;
   right: 0;
   padding: 0 10px 10px;
-  font-size: 0.875rem;
-  font-weight: 500;
+  ${getFontStyle({ size: 'small', weight: 'medium' })}
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

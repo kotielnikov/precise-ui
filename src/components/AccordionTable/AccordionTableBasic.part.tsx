@@ -50,7 +50,8 @@ const StyledCollapseAnimator = styled<AccordionTableItemProps, 'div'>('div')`
 `;
 
 const GroupTableCell = styled.td`
-  font-weight: bold;
+  getFontStyle({weight: 'bold'})
+  ${getFontStyle({ weight: 'bold' })}
   padding-left: 0.5em !important;
 `;
 

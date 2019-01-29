@@ -77,7 +77,7 @@ const ProgressRail = styled<ProgressContainerProps, 'div'>('div')`
 `;
 
 const ProgressTitle = styled.div`
-  font-size: ${remCalc('16px')};
+   ${getFontStyle({ size: 'medium' })}
   margin: 0 0 ${distance.medium};
   padding: 0;
   display: block;
@@ -85,7 +85,7 @@ const ProgressTitle = styled.div`
 
 const ProgressDescription = styled.div`
   margin: ${distance.small} 0 0;
-  font-size: ${remCalc('14px')};
+  ${getFontStyle({ size: 'small' })}
 `;
 
 const ProgressIndicator = styled.div`

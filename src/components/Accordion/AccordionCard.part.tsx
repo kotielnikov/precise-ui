@@ -44,14 +44,12 @@ const StyledListItem = styled(ListItem)`
 const Container = styled.div`
   position: relative;
   color: ${themed(({ theme }) => theme.text1)};
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
+  ${getFontStyle({ size: 'medium' })}
 `;
 
 const ContentContainer = reStyled.div<ActiveProps>(
   ({ open, theme: { ui1, ui2, ui4, ui5 } }) => `
-  font-size: ${remCalc('14px')};
-  line-height: 18px;
+  ${getFontStyle({ size: 'small' })}
   padding: ${distance.medium};
   background: ${open ? ui2 : ui1};
   border: 1px solid ${open ? ui5 : ui4};

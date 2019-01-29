@@ -97,7 +97,6 @@ const StyledNotification = reStyled.div<StyledNotificationProps>(
 const StyledTitle = reStyled.div(
   ({ theme: { notificationTitleFontSize, notificationTitleLineHeight } }) => `
   font-family: inherit;
-  font-weight: 500;
   font-size: ${notificationTitleFontSize};
   line-height: ${notificationTitleLineHeight};
   color: #404040;
@@ -109,7 +108,6 @@ const StyledContent = reStyled.div<LayoutProps>(
   ({ inline, theme: { notificationTextFontSize, notificationTextLineHeight } }) => `
   display: ${inline ? 'inline' : 'block'};
   font-family: inherit;
-  font-weight: normal;
   font-size: ${notificationTextFontSize};
   line-height: ${notificationTextLineHeight};
   color: #404040;
@@ -130,7 +128,7 @@ const CloseButton = styled(IconLink)`
   padding: 0;
   border: none;
   outline: none;
-  font-size: 1rem;
+  getFontStyle({size: 'medium'})
 `;
 
 const LayoutVertical = css`

@@ -29,7 +29,8 @@ const PseudoLinkStyle = css`
 `;
 
 const StyledActionLink = styled(Anchor)`
-  font-weight: 500;
+  ${getFontStyle({ weight: 'medium' })}
+
   text-decoration: none;
   color: ${themed(props => (props.disabled ? props.theme.text3 : props.theme.ui0))};
   display: ${(props: StyledActionLink) => (props.block ? 'block' : 'inline-block')};

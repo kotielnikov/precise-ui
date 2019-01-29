@@ -16,7 +16,7 @@ const finishTagKeys = [KeyCodes.enter, KeyCodes.space, KeyCodes.comma, KeyCodes.
 
 const StyledIcon = styled(Icon)`
   cursor: pointer;
-  font-size: 13px;
+  ${getFontStyle({ size: 'small' })}
   vertical-align: middle;
   color: ${themed(props => props.theme.ui5)};
   font-family: ${themed(props => props.theme.fontFamily)};
@@ -59,7 +59,7 @@ const StyledInput = styled<StyledInputProps, 'input'>('input')`
   width: ${props => (props.value.length > 2 ? props.value.length * 10 + 'px' : '20px')};
   color: ${themed(props => (props.disabled ? props.theme.textDisabled : dark))};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
-  font-size: 1rem;
+  getfontstyle({size: 'medium'})
   font-family: inherit;
 `;
 

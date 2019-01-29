@@ -107,7 +107,7 @@ const DropdownOptionText = styled.div`
   height: 100%;
   box-sizing: border-box;
   color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text1))};
-  font-size: ${remCalc('16px')};
+  ${getFontStyle({ size: 'medium' })}
   font-family: inherit;
   text-overflow: ellipsis;
   overflow: hidden;

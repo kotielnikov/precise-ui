@@ -44,8 +44,7 @@ const ToggleContainer = styled<ToggleContainerProps, 'div'>('div')`
   display: inline-block;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   color: ${themed(props => props.theme.text1)};
-  font-size: ${remCalc('16px')};
-  line-height: 18px;
+  ${getFontStyle({ size: 'medium' })}
 `;
 
 const ToggleBoxWrapper = styled.div`

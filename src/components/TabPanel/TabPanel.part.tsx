@@ -16,7 +16,7 @@ export const TabContent = styled.div``;
 
 const ActiveTab = css`
   color: ${themed(props => props.theme.text6)};
-  font-weight: 500;
+  getFontStyle({weight: 'medium'})
   border-color: ${dark};
 `;
 
@@ -40,9 +40,7 @@ export const TabHeader = styled<TabHeaderProps, 'li'>('li')`
   overflow: visible;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: ${TextStylings.delta.lineHeight};
-  font-size: ${TextStylings.delta.fontSize};
-  font-weight: 400;
+  ${getFontStyle({ size: 'large', weight: 'regular' })}
   box-sizing: border-box;
   border-bottom: 2px solid transparent;
   margin-right: ${distance.xxlarge};

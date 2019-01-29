@@ -4,7 +4,7 @@ import { remCalc } from '../../utils/remCalc';
 import { dark } from '../../colors';
 
 const RootContainer = styled.div`
-  font-size: ${remCalc('14px')};
+   ${getFontStyle({ size: 'small' })}
   color: ${dark};
 `;
 

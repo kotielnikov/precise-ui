@@ -127,22 +127,22 @@ const EnabledCalendarCell = css`
 const CalendarCell = styled.button`
   ${CommonCalendarCell};
   background: ${themed(({ theme }) => theme.ui2)};
-  font-size: 1rem;
+  ${getFontStyle({ size: 'medium' })}
   ${({ disabled }: StyledCalendarCell) => (disabled ? DisabledCalendarCell : EnabledCalendarCell)};
 `;
 
 const WeekHeaderCell = styled.div`
   ${CommonCalendarCell};
   border-color: transparent;
-  font-weight: bold;
-  line-height: ${remCalc('28px')};
+  ${getFontStyle({ weight: 'bold', lineHeight: 'xLarge' })}
 `;
 
 const Arrow = styled.button`
   background-color: transparent;
   padding: 0;
   border: none;
-  font-size: 1rem;
+  ${getFontStyle({ size: 'medium' })}
+
   align-self: start;
   cursor: pointer;
   > i {

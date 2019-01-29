@@ -22,7 +22,7 @@ const StyledMobileWrapper = styled.div`
 const StyledLabel = styled.div`
   color: ${themed(({ theme }) => theme.ui0)};
   padding-bottom: ${distance.medium};
-  font-size: ${remCalc('14px')};
+  getFontStyle({size: 'small'})
   min-height: ${remCalc('14px')};
 `;
 

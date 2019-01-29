@@ -51,8 +51,7 @@ export const Header = styled<TabHeaderProps, 'li'>('li')`
   box-sizing: border-box;
   ${props => (props.active ? ActiveTab : InactiveTab)};
   border: 1px solid ${themed(props => props.theme.ui4)};
-  font-size: ${remCalc('16px')};
-  line-height: ${remCalc('20px')};
+  ${getFontStyle({ size: 'medium' })}
 `;
 
 export interface TabItemProps {

@@ -28,8 +28,7 @@ const StyledContainer = reStyled<ActiveProps, 'div'>('div')(
   }) => `
   position: relative;
   color: ${text1};
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
+  getFontStyle({size: 'medium'})
   border: 1px solid ${open ? openedBorderColor : borderColor};
 `,
 );

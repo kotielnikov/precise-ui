@@ -66,8 +66,7 @@ const ListItem = reStyled.li<ListItemProps>(
   display: block;
   width: 100%;
   height: auto;
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
+  getFontStyle({size: 'medium'})
   position: relative;
 
   a {
@@ -118,8 +117,7 @@ const ListDivider = styled.hr`
 `;
 
 const ListHeader = styled.span`
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
+  getFontStyle({size: 'medium'})
   padding: ${distance.medium} ${distance.small};
   width: 100%;
   display: block;

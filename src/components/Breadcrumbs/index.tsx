@@ -8,7 +8,7 @@ import { distance } from '../../distance';
 import { OverflowMenu } from '../OverflowMenu';
 
 const BreadcrumbContainer = styled.div`
-  font-size: ${remCalc('14px')};
+  ${getFontStyle({ size: 'small' })}
   color: ${themed(props => props.theme.ui8)};
 `;
 

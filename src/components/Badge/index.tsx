@@ -31,8 +31,7 @@ const NormalBadge = BasicBadge.extend`
   display: inline-block;
   color: ${themed(({ theme }) => theme.badgeColor)};
   background: ${themed(({ theme }) => theme.badgeBackground)};
-  font-size: 0.7em;
-  line-height: 1.55;
+  ${getFontStyle({ size: 'xSmall' })}
   min-width: 2em;
   padding: 0 ${distance.xsmall};
   border: solid 1px ${themed(({ theme }) => theme.badgeColor)};

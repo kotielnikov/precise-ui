@@ -82,10 +82,8 @@ const ModalContent = styled.div`
 `;
 
 const StyledModalBody = styled.div`
-  font-size: 1rem;
-  font-weight: normal;
+  ${getFontStyle({ size: 'medium', weight: 'regular' })}
   text-align: left;
-  line-height: ${remCalc('20px')};
   padding: 0 ${distance.xxlarge} ${distance.xxlarge};
   margin-bottom: auto;
 `;

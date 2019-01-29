@@ -75,7 +75,8 @@ const StyledNavBar = HeaderStackPanel.extend`
 
 const StyledMenuLink = styled.a`
   position: relative;
-  font-size: 30px;
+  ${getFontStyle({ size: 'xxLarge' })}
+
   cursor: pointer;
   color: ${black};
   text-decoration: none;
@@ -114,7 +115,8 @@ const StyledMenuItems = styled.ul`
 
 const StyledMenuItem = styled.li`
   margin: ${distance.small} 0;
-  font-size: 1em;
+  ${getFontStyle({ size: 'medium' })}
+
   text-align: right;
   & a {
     text-decoration: none;
@@ -137,12 +139,13 @@ const StyledLinks = styled.div`
 `;
 
 const StyledLead = styled.div`
-  font-size: 30px;
+    ${getFontStyle({ size: 'xxLarge' })}
+
   margin-right: ${distance.medium};
 `;
 
 const StyledPin = styled.div`
-  font-size: 30px;
+   ${getFontStyle({ size: 'xxLarge' })}
   margin-left: ${distance.medium};
 `;
 

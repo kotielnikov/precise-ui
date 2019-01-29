@@ -174,7 +174,7 @@ const Arrow = styled.button`
   background-color: transparent;
   padding: 0;
   border: none;
-  font-size: 1rem;
+  ${getFontStyle({ size: 'medium' })}
   align-self: start;
   cursor: pointer;
   > i {
